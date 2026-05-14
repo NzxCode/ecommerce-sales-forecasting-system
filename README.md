@@ -4,23 +4,30 @@ AI-powered end-to-end sales forecasting platform using Machine Learning, FastAPI
 
 ---
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Scikit-Learn](https://img.shields.io/badge/ML-ScikitLearn-orange)
+
+---
+
 # 📌 Overview
 
 This project simulates a real-world AI system used by modern e-commerce businesses to predict future sales based on:
 
-- website traffic
-- advertising spend
-- promotional discount strategy
+- Website Traffic
+- Advertising Spend
+- Promotional Discount Strategy
 
 The system combines:
 
 - Machine Learning
 - API Engineering
-- Interactive Dashboard
+- Interactive Dashboard Development
 - Data Visualization
 - Business Analytics
 
-into one production-style portfolio project.
+into one production-style AI portfolio project.
 
 ---
 
@@ -40,34 +47,34 @@ into one production-style portfolio project.
 
 ## Main Dashboard
 
-![Dashboard](e-commerce_dashboard.png)
+![Dashboard](screenshots/e-commerce_dashboard.png)
 
 ---
 
 ## Prediction Result Example
 
-![Prediction Result](e-commerce_dashboard_after.png)
+![Prediction Result](screenshots/e-commerce_dashboard_after.png)
 
 ---
 
 # 💼 Business Problem
 
-Modern e-commerce companies need accurate sales forecasting to support:
+Modern e-commerce companies require accurate sales forecasting systems to support:
 
-- inventory planning
-- marketing budget allocation
-- revenue optimization
-- promotional campaign planning
-- operational efficiency
+- Inventory Planning
+- Marketing Budget Allocation
+- Revenue Optimization
+- Promotional Campaign Planning
+- Operational Efficiency
 
 Without forecasting systems, businesses risk:
 
-- overstock inventory
-- stock shortages
-- inefficient advertising spend
-- inaccurate revenue planning
+- Overstock Inventory
+- Stock Shortages
+- Inefficient Advertising Spend
+- Inaccurate Revenue Planning
 
-This project demonstrates how AI and machine learning can help businesses make more data-driven operational decisions.
+This project demonstrates how AI and Machine Learning can help businesses make more data-driven operational decisions.
 
 ---
 
@@ -75,199 +82,336 @@ This project demonstrates how AI and machine learning can help businesses make m
 
 This forecasting system can help businesses:
 
-- estimate future sales performance
-- optimize advertising spending
-- evaluate promotional strategies
-- improve operational planning
-- support strategic decision-making
+- Estimate future sales performance
+- Optimize advertising spending
+- Evaluate promotional strategies
+- Improve operational planning
+- Support strategic decision-making
 
 The workflow reflects practical business use cases commonly found in:
 
-- e-commerce companies
-- retail businesses
-- AI analytics teams
-- business intelligence departments
+- E-Commerce Companies
+- Retail Businesses
+- AI Analytics Teams
+- Business Intelligence Departments
 
 ---
 
 # 🏗️ System Architecture
 
-mermaid
+```mermaid
 flowchart LR
 
 A[User Input]
 --> B[Streamlit Dashboard]
 
-B --> C[FastAPI Backend]
+B --> C[FastAPI Backend API]
 
 C --> D[Machine Learning Model]
 
-D --> E[Sales Prediction]
+D --> E[Sales Prediction Engine]
 
-E --> F[Prediction Display]
-⚙️ Tech Stack
-Machine Learning
-Scikit-learn
-NumPy
-Pandas
-Backend
-FastAPI
-Uvicorn
-Frontend
-Streamlit
-Deployment
-ngrok
-Visualization
-Matplotlib
-Seaborn
-📊 Model Performance
-Prediction vs Actual
-Training Loss
-Revenue Trend Analysis
-🔌 API Documentation
+E --> F[Prediction Result Display]
+```
+
+---
+
+# ⚙️ Tech Stack
+
+## Machine Learning
+
+- Scikit-learn
+- Pandas
+- NumPy
+
+## Backend
+
+- FastAPI
+- Uvicorn
+
+## Frontend
+
+- Streamlit
+
+## Deployment
+
+- ngrok
+
+## Visualization
+
+- Matplotlib
+- Seaborn
+
+---
+
+# 📊 Model Performance
+
+## Prediction vs Actual
+
+![Prediction vs Actual](screenshots/prediction-vs-actual.png)
+
+---
+
+## Training Loss
+
+![Training Loss](screenshots/training-loss.png)
+
+---
+
+## Revenue Trend Analysis
+
+![Revenue Trend](screenshots/revenue-trend.png)
+
+---
+
+# 🔌 API Documentation
 
 The project includes interactive API documentation using Swagger UI.
 
-Swagger API Example
-📦 API Example
-Request
+## Swagger API Example
+
+![Swagger API](screenshots/swagger-api-success.png)
+
+---
+
+# 📦 API Example
+
+## Request
+
+```json
 POST /predict-sales
+
 {
   "day_index": 30,
   "traffic": 20000,
   "ads_spend": 1000,
   "discount": 10
 }
-Response
+```
+
+## Response
+
+```json
 {
   "predicted_sales": 15950
 }
-🧠 Machine Learning Workflow
+```
+
+---
+
+# 🧠 Machine Learning Workflow
 
 The project follows an end-to-end machine learning workflow:
 
-Data Collection
-Data Cleaning
-Feature Engineering
-Model Training
-Model Evaluation
-API Development
-Dashboard Development
-Deployment & Public Access
-📁 Project Structure
-Project Folder Structure
+1. Data Collection  
+2. Data Cleaning  
+3. Feature Engineering  
+4. Model Training  
+5. Model Evaluation  
+6. API Development  
+7. Dashboard Development  
+8. Deployment & Public Access  
+
+---
+
+# 📁 Project Structure
+
+```text
 E-Commerce-Sales-Forecasting/
 │
 ├── app/
 ├── data/
+│   ├── processed/
+│   └── raw/
+│
 ├── model/
 ├── notebooks/
 ├── screenshots/
 ├── src/
+│
 ├── app.py
 ├── requirements.txt
+├── LICENSE
 └── README.md
-🖥️ Server Deployment
+```
+
+---
+
+# 🖥️ Server Deployment
 
 The application server was deployed using Streamlit and exposed publicly using ngrok.
 
-Server Running Example
-⚡ How To Run
-1. Clone Repository
+## Server Running Example
+
+![Server Running](screenshots/server-running.png)
+
+---
+
+# ⚡ How To Run
+
+## 1. Clone Repository
+
+```bash
 git clone https://github.com/yourusername/ecommerce-sales-forecasting.git
-2. Install Dependencies
+```
+
+---
+
+## 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-3. Run FastAPI Backend
+```
+
+---
+
+## 3. Run FastAPI Backend
+
+```bash
 uvicorn app:app --reload
-4. Run Streamlit Dashboard
+```
+
+---
+
+## 4. Run Streamlit Dashboard
+
+```bash
 streamlit run app.py
-5. Run ngrok Deployment
+```
+
+---
+
+## 5. Run ngrok Deployment
+
+```python
 from pyngrok import ngrok
 
 public_url = ngrok.connect(8501)
+
 print(public_url)
-📈 Key Features
-AI-Powered Forecasting
+```
 
-Uses machine learning to estimate future sales based on business metrics.
+---
 
-Interactive Dashboard
+# 📈 Key Features
+
+## AI-Powered Forecasting
+
+Uses Machine Learning to estimate future sales based on operational business metrics.
+
+---
+
+## Interactive Dashboard
 
 Provides a user-friendly interface for real-time prediction testing.
 
-Production-Style API
+---
+
+## Production-Style API
 
 Implements FastAPI backend architecture commonly used in real-world ML systems.
 
-Public Deployment
+---
+
+## Public Deployment
 
 Allows external access through ngrok public URLs.
 
-🧪 Engineering Decisions
-Why FastAPI?
+---
 
-FastAPI was selected because:
+# 🧪 Engineering Decisions
 
-lightweight
-fast inference performance
-automatic Swagger documentation
-production-friendly architecture
-Why Streamlit?
+## Why FastAPI?
+
+FastAPI was selected because it provides:
+
+- Lightweight architecture
+- Fast inference performance
+- Automatic Swagger documentation
+- Production-friendly API development
+
+---
+
+## Why Streamlit?
 
 Streamlit enables:
 
-rapid dashboard prototyping
-interactive UI development
-quick ML visualization
-Why ngrok?
+- Rapid dashboard prototyping
+- Interactive UI development
+- Quick ML visualization workflows
+
+---
+
+## Why ngrok?
 
 ngrok was used to:
 
-expose localhost services publicly
-test deployment workflows
-simulate real-world API accessibility
-⚠️ Current Limitations
-model trained on sample dataset
-temporary deployment using ngrok
-no authentication system implemented yet
-no cloud infrastructure integration yet
-🔮 Future Improvements
+- Expose localhost services publicly
+- Test deployment workflows
+- Simulate real-world API accessibility
+
+---
+
+# ⚠️ Current Limitations
+
+- Model trained on sample dataset
+- Temporary deployment using ngrok
+- No authentication system implemented yet
+- No cloud infrastructure integration yet
+
+---
+
+# 🔮 Future Improvements
 
 Potential future upgrades include:
 
-Docker containerization
-CI/CD pipeline
-PostgreSQL integration
-cloud deployment (AWS/GCP)
-model monitoring
-real-time analytics dashboard
-advanced forecasting algorithms
-MLOps pipeline integration
-📚 What I Learned
+- Docker Containerization
+- CI/CD Pipeline
+- PostgreSQL Integration
+- Cloud Deployment (AWS/GCP)
+- Model Monitoring
+- Real-time Analytics Dashboard
+- Advanced Forecasting Algorithms
+- MLOps Pipeline Integration
+
+---
+
+# 📚 What I Learned
 
 Through this project, I learned:
 
-machine learning deployment workflows
-API engineering using FastAPI
-interactive dashboard development
-public deployment using ngrok
-end-to-end ML system integration
-business-oriented AI implementation
-production-style project structuring
-👨‍💻 Author
-Nicolas Gabriel
-GitHub
+- Machine Learning deployment workflows
+- API engineering using FastAPI
+- Interactive dashboard development
+- Public deployment using ngrok
+- End-to-end ML system integration
+- Business-oriented AI implementation
+- Production-style project structuring
+
+---
+
+# 👨‍💻 Author
+
+## Nicolas Gabriel
+
+### GitHub
+
 https://github.com/NzxCode
-LinkedIn
+
+### LinkedIn
+
 https://www.linkedin.com/
-⭐ Final Notes
+
+---
+
+# ⭐ Final Notes
 
 This project was built to simulate a real-world AI engineering workflow that combines:
 
-machine learning
-backend engineering
-frontend dashboard development
-deployment workflows
-business-oriented analytics
+- Machine Learning
+- Backend Engineering
+- Frontend Dashboard Development
+- Deployment Workflows
+- Business-Oriented Analytics
 
 into a single end-to-end production-style portfolio project.
